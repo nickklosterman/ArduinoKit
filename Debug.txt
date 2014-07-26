@@ -1,0 +1,21 @@
+Uploading a bad script can gum up the Arduino.
+After you gum up the Arduino, you will see various errors.
+One of the symptoms is that you will no longer be able to connect and program the Arduino. 
+http://stackoverflow.com/questions/5290428/how-to-reset-an-arduino-board
+To rectify this you will need to attempt to upload a known working script, such as one of the builtin example scripts. 
+While uploading the script, continually hit the hard reset button on the Arduino board. 
+You may need to do this several times before the upload works. 
+
+I ran around trying all sorts of things before I stumbled upon the above solution trying to figure out why the uploading of scripts in the past worked and then stopped all of a sudden.
+I attempted to update Arduino on Linux Mint : sudo apt-get install arduino. I received that i was on the latest version (1.0)
+I downloaded and un-tgz the most recent version from the arduino.cc site (1.0.5). 
+I used `dmesg` to make sure the device was being registered when I plugged it in. 
+There were forum posts stating that if the Arduino IDE comes up slow that it is a sign of problems with the USB connection as it is scanning these ports when it starts up. http://arduino.cc/en/Guide/Troubleshooting (although it states that the problem is mainly for Windows machines.) Also relevant : "On Linux, the Uno and Mega 2560 show up as devices of the form /dev/ttyACM0. These are not supported by the standard version of the RXTX library that the Arduino software uses for serial communication. The Arduino software download for Linux includes a version of the RXTX library patched to also search for these /dev/ttyACM* devices."
+I made sure I followed the directions <a href="http://playground.arduino.cc/Linux/Mint">here</a> and verified that I was a member of dialout via the `groups` command. 
+There were forum posts stating that there was a bug that could be resolved by updating the firmware on the Atmega8U2 chip. I didn't do that since it worked fine before. http://arduino.cc/en/Hacking/DFUProgramming8U2
+
+Manually (via command line) uploading a sketch to the Arduino to receive more debug info: ( http://stackoverflow.com/questions/19765037/arduino-sketch-upload-issue-avrdude-stk500-recv-programmer-is-not-respondi )
+Go into File -> Preferences and turn on verbose mode. 
+The avrdude CLI for your sketch will be spit out when you compile the program. Copy this line :
+/home/nicky/Git/ArduinoKit/arduino-1.0.5/hardware/tools/avrdude -C/home/nicky/Git/ArduinoKit/arduino-1.0.5/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -carduino -P/dev/ttyS0 -b115200 -D -Uflash:w:/tmp/build3668164470524831752.tmp/Blink.cpp.hex:i 
+and run it in a terminal. 
