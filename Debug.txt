@@ -19,3 +19,6 @@ Go into File -> Preferences and turn on verbose mode.
 The avrdude CLI for your sketch will be spit out when you compile the program. Copy this line :
 /home/nicky/Git/ArduinoKit/arduino-1.0.5/hardware/tools/avrdude -C/home/nicky/Git/ArduinoKit/arduino-1.0.5/hardware/tools/avrdude.conf -v -v -v -v -patmega328p -carduino -P/dev/ttyS0 -b115200 -D -Uflash:w:/tmp/build3668164470524831752.tmp/Blink.cpp.hex:i 
 and run it in a terminal. 
+
+Libaries:
+You will most likely get an error the first time you try to build an example or code that uses a library as the library objects won't have been created just yet. Simply compile a second time and things should work. 
