@@ -20,39 +20,67 @@ The Arduino UNO is circa January 2011 as that is the date on the receipt. It has
 </tr>
 <a href="http://www.dx.com/p/rfid-stepper-motor-learning-kit-for-arduino-multicolored-247020#.U9MF59Y550k"> RFID Stepper Motor Learning Kit </a>
 <table>
-<tr><td> this wasn't listed but included : 1 8x8 1388asr led matrix <a href="http://arduino.cc/en/Tutorial/RowColumnScanning">Arduino layout and example code</a>  <a href="http://www.youtube.com/watch?v=2m3PbCvcqkY">Youtube video of explanation</a>  <a href="">link</a>  <a href="">link</a> </td></tr>
+<tr><td> this wasn't listed but included : 1 8x8 1388asr led matrix <a href="http://wenku.baidu.com/view/8f2843daa58da0116c17490d.html">drawing</a> <a href="1388ASR_8x8LEDMatrix.png">local image</a> <a href="http://arduino.cc/en/Tutorial/RowColumnScanning">Arduino layout and example code</a>  <a href="http://www.youtube.com/watch?v=2m3PbCvcqkY">Youtube video of explanation</a>  <a href="">link</a>  <a href="">link</a> </td></tr>
+<tr><td> this wasn't listed but included : 1 Water Sensor <a href="http://www.seeedstudio.com/wiki/Grove_-_Water_Sensor">Demo</a> </td></tr>
 <tr><td>1 x UNO R3 board</td></tr>
 <tr><td>1 x Expansion board</td></tr>
-<tr><td>5 x Green LED</td></tr>
+<tr><td>5 x Green LED -  long lead is positive</td></tr>
 <tr><td>5 x Yellow LED</td></tr>
 <tr><td>5 x Red LED</td></tr>
 <tr><td>10 x 1k resistor - BrBrBlBlBr</td></tr>
 <tr><td>10 x 10k resistor - BrRBlBlBr</td></tr>
 <tr><td>10 x 220R resistor - RBrBlBlBr</td></tr>
-<tr><td>1 x 74HC595N chips - <a href="SN74HC595N-Texas-Instruments-datasheet-8384082.pdf">datasheet (local)</a>  <a href="http://www.arduino.cc/en/Tutorial/ShiftOut">Arduino layout and example code</a> </td></tr>
-<tr><td>1 x Piezo buzzer - just apply voltage across, not sure what the difference is between the buzzer and sounder is</td></tr>
+<tr><td>1 x 74HC595N chips - <a href="./datasheets/SN74HC595N-Texas-Instruments-datasheet-8384082.pdf">datasheet (local)</a>  <a href="http://www.arduino.cc/en/Tutorial/ShiftOut">Arduino layout and example code</a> </td></tr>
+<tr><td>1 x Piezo buzzer - just apply voltage across, not sure what the difference is between the buzzer and sounder is: The one with the black epoxy encased bottom makes a nicer tone whereas the unencased one makes more of popping sound. </td></tr>
 <tr><td>1 x Piezo sounders - just apply voltage across </td></tr>
-<tr><td>1 x 1 digital tube</td></tr>
-<tr><td>1 x 4 digital tube</td></tr>
+<tr><td>1 x 1 digital tube ( 7 segment display 5161BS seems to be <a href="http://www.aliexpress.com/item/20-PCS-LD-5161BS-1-Digit-0-56-RED-7-SEGMENT-LED-DISPLAY-COMMON-ANODE/872058598.html">common anode</a> i.e. power to common, ground is the 'signal') I believe the operational voltage is 3.3V <a href="http://www.circuitstoday.com/7-segment-display-driver">general info on 7segment display and CAnode vs CCath</a> <a href="http://www.hacktronics.com/Tutorials/arduino-and-7-segment-led.html">more info and sketch, had to reverse things since mine is common anode tho.</a> <a href="SevenSegmentCommonCathodeForCommonAnodeBlackLineGoesToVcc3.3V.jpg">link to common cathode schematic; for our common anode switch the black line from GND to Vcc</a> </td></tr>
+<tr><td>1 x 4 digital tube (4x1 7 Segment display 5641BS Common Anode 3.3V<a href="http://www.futurlec.com/LED/7FR5641BS.shtml">Gen'l info and diagrams </a> <a href="NFD-5641_Dimension.gif">dimension</a> <a href="NFD-5641BS_Circuit.gif">usage</a> Pinout goes 1->12 in a CCW direction from the bottom left corner. i.e. pin 12 is directly above pin 1, pin 7 is directly above pin 6
+<br><b>I don't think these are the exact specs but they are probably close:</b>
+<pre>
+Specifications
+Display
+Digit Size: 0.56"
+Material: GaAlAs/GaAs
+Emitted Color: Red
+Peak Wavelength: 660 nm
+
+Absolute Maximum Ratings
+Pulse Forward Current (Ifp): 150 mA
+DC Forward Current (If): 30 mA
+Reverse Current (Ir): 20 µA microA
+Power Dissipation (If): 80x8 mW
+Operating Temperature (Top): -40 to +80 oC
+
+Electro-Optical Data (@ 10 mA)
+Forward Voltage - Typical: 2.20 V
+Forward Voltage - Maximum: 2.50 V
+Luminous Intensity Minimum Per Segment: 56 Mcd
+Luminous Intensity Typical Per Segment: 88 Mcd
+</pre>
+<a href="http://forum.arduino.cc/index.php/topic,20201.0.html">Forum posts </a>
+<a href="https://docs.google.com/file/d/0Bwrp4uluZCpNdE9oWTY0M3BncTA/edit?pli=1">didn't use but this lib might be useful or at least worth a look</a>
+<a href="http://us.yhs4.search.yahoo.com/yhs/search?p=arduino+4+digit+7+segment+display&fr=sfp&fr2=&type=__alt__ddc_linuxmint_com&hspart=ddc&hsimp=yhs-linuxmint&iscqry=">yahoo search</a>
+
+</td></tr>
 <tr><td>10 x Push button switches</td></tr>
 <tr><td>3 x Optical resistor - ~3k-25k ohm</td></tr>
 <tr><td>1 x Adjustable resistor</td></tr>
 <tr><td>1 x RFID module <a href="http://forum.arduino.cc/index.php?topic=182242.0">arduino forum discussion link</a> <a href="http://us.yhs4.search.yahoo.com/yhs/search?p=rfid+rc522">yahoo search</a></td></tr>
 <tr><td>1 x RFID keychain and white card</td></tr>
-<tr><td>1 x Temperature and humidity module<img src="http://img.dxcdn.com/productimages/sku_193260_1_small.jpg"><a href="http://www.dx.com/p/arduino-digital-temperature-humidity-sensor-module-121350#.U9RtptY550k">DX link</a> </td> <a href="https://learn.adafruit.com/dht">Adafruit tutorial; has links to code and other valuable info; they have a datasheet but for a model up gives tech specs though </a><a href="https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor">connecting</a> <a href="https://github.com/adafruit/DHT-sensor-library">Adafruit DHT sensor github library</a> **NOTE** my sensor pinout is slightly different with Signal being far left and Vcc being center. I used the 100k resistor to pullup Vsignal.</tr>
+<tr><td>1 x Temperature and humidity module<img src="http://img.dxcdn.com/productimages/sku_193260_1_small.jpg"><a href="http://www.dx.com/p/arduino-digital-temperature-humidity-sensor-module-121350#.U9RtptY550k">DX link</a><a href="https://learn.adafruit.com/dht">Adafruit tutorial; has links to code and other valuable info; they have a datasheet but for a model up gives tech specs though </a><a href="https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor">connecting</a> <a href="https://github.com/adafruit/DHT-sensor-library">Adafruit DHT sensor github library</a> **NOTE** my sensor pinout is slightly different with Signal being far left and Vcc being center. I used the 100k resistor to pullup Vsignal. </td> </tr>
 <tr><td>4 x 4 keypad module <a href="http://bradsduino.blogspot.com/2012/10/4-x4-universal-16-key-keypad-arduino.html">Code and instructions for 4x4 keypad</a><a href="http://forum.arduino.cc/index.php/topic,5333.0.html">possibly useful</a> <a href="http://playground.arduino.cc/Code/Keypad">keypad libray</a> <a href="http://playground.arduino.cc/Main/KeypadTutorial">matrix keypad howo</a><a href="http://arduinodev.com/arduino-4x4-keypad-test/">same code as bradsduino</a> </td></tr>
-<tr><td>1 x LM35 sensor module - <a href="http://www.dx.com/s/lm35+temperature+sensor">lm35 temperature sensor</a> its just a small semicircular three pronged guy <a href="lm35.pdf">local datasheet</a> </td></tr>
+<tr><td>1 x LM35 sensor module - <a href="http://www.dx.com/s/lm35+temperature+sensor">lm35 temperature sensor</a> its just a small semicircular three pronged guy <a href="./datasheets/lm35.pdf">local datasheet</a> I think I fried this chip. I was having problems with just the USB connection from the PC. It seemed like the lm35 was drawing too much current such that board couldn't be programmed. You could tell as the 'On' light was very dim. and the L,Tx,Rx lights were never on. I attempted to rectify this situation by concurrently plugging in the 5V power supply. I pulled up the serial monitor and it was (consistently) reporting in the 500F range. I then smelled a burning smell. I unplugged all the power and toched the lm35 and burned myself. I let it cool off and plugged the USB cable back in and the lights on the Arduino board came on. I could connect to the serial  monitor but was getting nonsense temperatures. Again I touched the LM35 and it was really hot. I could unplug the jumpers to the LM35 and still get readings. Yeah pretty sure its KIA. I was reading the raw analog value and it was 499-500 when hooked up to 5V so am pretty sure it was just passing through the voltage in 0.1V increments.   </td></tr>
 <tr><td>1 x Infrared receiver</td></tr>
 <tr><td>1 x Flame sensor</td></tr>
-<tr><td>2 x Rocker switch</td></tr>
+<tr><td>2 x Rocker switch - these are the two little tubes with HXD on the side. You can hear the ball bearing go back and forth when you tilt them.</td></tr>
 <tr><td>1 x Remote control</td></tr>
-<tr><td><img src="http://www.hobbyking.com/hobbyking/store/catalog/37409s.jpg"> <img src="http://www.hobbyking.com/hobbyking/store/catalog/37409.jpg">1 x 1602/11C module <a href="http://www.dx.com/p/arduino-iic-i2c-twi-spi-serial-lcd-1602-module-blue-green-140080#.U9MTJdY550k">dx link</a> <a href="http://www.dx.com/s/1602"></a> </td></tr>
+<tr><td><img src="http://www.hobbyking.com/hobbyking/store/catalog/37409s.jpg"> <img src="http://www.hobbyking.com/hobbyking/store/catalog/37409.jpg">1 x 1602/11C module <a href="http://www.dx.com/p/arduino-iic-i2c-twi-spi-serial-lcd-1602-module-blue-green-140080#.U9MTJdY550k">dx link</a> <a href="http://www.dx.com/s/1602">1602</a> <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=135">DFRobot link, has schematics and sample code and library</a> <a href="http://arduino-info.wikispaces.com/LCD-Blue-I2C">appears that the first one is the same or at least has the same controller board on the back as mine</a> <a href="http://forum.arduino.cc/index.php/topic,202273.0.html">possibly useful:user asking questions about using this module.</a></td></tr>
 <tr><td> 1 x PS2 Joystick</td></tr>
 <tr><td>1 x Step motor</td></tr>
 <tr><td>1 x Step motor drive board</td></tr>
 <tr><td>1 x 9g Sero(25cm)</td></tr>
 <tr><td>1 x RGB module - just hook up ground and signal to each of the three color pins </td></tr>
-<tr><td>1 x Relay module <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354">dx</a> </td><td>   <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354#.U9MF1tY550k">Keyes 5v relay module</a> </td></tr>
+<tr><td>1 x Relay module <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354">dx</a> </td><td>   <a href="http://www.dx.com/p/arduino-5v-relay-module-blue-black-121354#.U9MF1tY550k">Keyes 5v relay module</a> <a href="http://www.instructables.com/id/SEEED-Studio-Arduino-5V-Relay-module-Digita/">Uses</a> <a href="http://forum.arduino.cc/index.php?topic=79745.0">forum post</a></td></tr>
 <tr><td>30 x Bread board cable (15c,)</td></tr>
 <tr><td><img src="http://img.dxcdn.com/productimages/sku_121338_1_small.jpg">10 x Dupont line (30cm)</td></tr>
 <tr><td>1 x 2.54 Pin head</td></tr>
@@ -111,5 +139,68 @@ The Arduino UNO is circa January 2011 as that is the date on the receipt. It has
 
 
 RFID Stepper Motor Learning kit for Arduino - Multicolored: http://www.dx.com/p/rfid-stepper-motor-learning-kit-for-arduino-multicolored-247020#.U3q7FHI550l
+<hr>
+
+LM35:
+<ul>
+<li>http://www.buildcircuit.com/heat-sensor-using-lm35-and-arduino/
+<li>http://fritzing.org/projects/thermistor-output-to-lcd/
+<li>http://www.facstaff.bucknell.edu/mastascu/elessonshtml/Sensors/TempLM35.html
+<li>http://us.yhs4.search.yahoo.com/yhs/search;_ylt=A0LEV72yG9VTiyMAwqcPxQt.?p=arduino+lm35&fr2=sb-top&hspart=ddc&hsimp=yhs-linuxmint&type=__alt__ddc_linuxmint_com
+<li>http://www.instructables.com/id/ARDUINO-TEMPERATURE-SENSOR-LM35/
+<li>http://pscmpf.blogspot.com/2008/12/arduino-lm35-sensor.html  uses processing for the output as a nice graph http://pscmpf.blogspot.com/2008/12/arduino-lm35-sensor.html
+<li>http://www.instructables.com/id/Arduino-LCD-Thermometer-with-LM35-Temp-Sensor/
+<li>http://forum.arduino.cc/index.php/topic,14736.0.html
+<li>http://playground.arduino.cc/Main/LM35HigherResolution
+<li>http://forum.arduino.cc/index.php/topic,18552.0.html
+<li>http://www.circuitstoday.com/temperature-logger-using-arduino
+<li>https://learn.adafruit.com/tmp36-temperature-sensor/using-a-temp-sensor
+<li>
+<li>
+</ul>
+
+Potentionmeter: I think you just apply Vcc to R side, GND to L side and the signal is in the middle (w knob facing you). 
+<ul>
+<li>http://us.yhs4.search.yahoo.com/yhs/search?p=arduino+potentiometer+tutorial&fr=sfp&fr2=&type=__alt__ddc_linuxmint_com&hspart=ddc&hsimp=yhs-linuxmint&iscqry=
+<li>http://playground.arduino.cc/Code/Potentiometer
+<li>http://arduino.cc/en/Tutorial/Knob
+
+<li>http://www.electroschematics.com/9009/led-brightness-fan-speed-arduino/
+<li>http://www.arduino-tutorials.com/tag/potentiometer/
+<li>
+<li>
+<li>
+<li><li>
+<li>
+<li><li>
+<li>
+<li><li>
+<li>
+<li>
+</ul>
+
+http://www.ladyada.net/learn/arduino/
+<br>
+Fritzing:
+<ul>
+<li><a href="http://fritzing.org/projects/">Projects Gallery</a>
+<li><a href="https://code.google.com/p/fritzing/issues/detail?id=2753">Fritzing Parts Thread:1</a>
+<li><a href="https://code.google.com/p/fritzing/issues/detail?id=875">Fritzing Parts Thread:2</a>
+<li><a href="https://github.com/search?q=fritzing">Github Fritzing</a>
+</ul>
+
+<br>
+Arduino
+<ul>
+<li><a href="https://github.com/search?q=arduino">Github Arduino</a>
+<li><a href="http://www.instructables.com/tag/type-id/category-technology/channel-arduino/">Instructables Arduino</a>
+<li><a href="http://hackaday.com/category/arduino-hacks/">Arduino Hacks on HackADay</a>
+</ul>
+<br>
+Raspberry Pi
+<ul>
+<li> <a href="https://github.com/raspberrypilearning">Raspi Learning on Github.</a>
+</ul>
+<a href="http://www.dx.com/s/arduino%2bdisplay">Arduino Display on DX</a>
 </body>
 </html>

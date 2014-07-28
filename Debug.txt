@@ -14,6 +14,12 @@ There were forum posts stating that if the Arduino IDE comes up slow that it is 
 I made sure I followed the directions <a href="http://playground.arduino.cc/Linux/Mint">here</a> and verified that I was a member of dialout via the `groups` command. 
 There were forum posts stating that there was a bug that could be resolved by updating the firmware on the Atmega8U2 chip. I didn't do that since it worked fine before. http://arduino.cc/en/Hacking/DFUProgramming8U2
 
+Using dmesg: 
+dmesg | grep -i usb
+Make sure that dmesg doesn't end with this type of message:
+[17538.712088] usb 5-1: USB disconnect, device number 8
+--->>If this is occurring try to program the board without any connections made.
+
 Manually (via command line) uploading a sketch to the Arduino to receive more debug info: ( http://stackoverflow.com/questions/19765037/arduino-sketch-upload-issue-avrdude-stk500-recv-programmer-is-not-respondi )
 Go into File -> Preferences and turn on verbose mode. 
 The avrdude CLI for your sketch will be spit out when you compile the program. Copy this line :
