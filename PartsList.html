@@ -21,7 +21,7 @@ The Arduino UNO is circa January 2011 as that is the date on the receipt. It has
 <a href="http://www.dx.com/p/rfid-stepper-motor-learning-kit-for-arduino-multicolored-247020#.U9MF59Y550k"> RFID Stepper Motor Learning Kit </a>
 <table>
 <tr><td> this wasn't listed but included : 1 8x8 1388asr led matrix <a href="http://wenku.baidu.com/view/8f2843daa58da0116c17490d.html">drawing</a> <a href="1388ASR_8x8LEDMatrix.png">local image</a> <a href="http://arduino.cc/en/Tutorial/RowColumnScanning">Arduino layout and example code</a>  <a href="http://www.youtube.com/watch?v=2m3PbCvcqkY">Youtube video of explanation</a>  <a href="">link</a>  <a href="">link</a> </td></tr>
-<tr><td> this wasn't listed but included : 1 Water Sensor <a href="http://www.seeedstudio.com/wiki/Grove_-_Water_Sensor">Demo</a> </td></tr>
+<tr><td> this wasn't listed but included : 1 Water Sensor <img src="http://img.dxcdn.com/productimages/sku_276572_1.jpg"> <a href="http://www.seeedstudio.com/wiki/Grove_-_Water_Sensor">Demo</a> </td></tr>
 <tr><td>1 x UNO R3 board</td></tr>
 <tr><td>1 x Expansion board</td></tr>
 <tr><td>5 x Green LED -  long lead is positive</td></tr>
@@ -62,17 +62,28 @@ Luminous Intensity Typical Per Segment: 88 Mcd
 <a href="http://us.yhs4.search.yahoo.com/yhs/search?p=arduino+4+digit+7+segment+display&fr=sfp&fr2=&type=__alt__ddc_linuxmint_com&hspart=ddc&hsimp=yhs-linuxmint&iscqry=">yahoo search</a>
 
 </td></tr>
-<tr><td>10 x Push button switches</td></tr>
+<tr><td>10 x Push button switches<a href="http://arduino.cc/en/Tutorial/Button">Button Demo</a> <a href="http://www.ladyada.net/learn/arduino/lesson5.html"> good </a> <a href="http://www.instructables.com/id/Arduino-All-in-One-Getting-Started-Guide/step3/Wiring-the-Pushbutton-Switch/"> discussion of </a> <a href="http://duino4projects.com/push-button-using-an-arduino/"> push up/pull down resistors when using switch</a> </td></tr>
+<tr><td>not listed but included 4 x Small Push button switches <a href="http://arduino.cc/en/Tutorial/Button">Button Demo</a></td></tr>
 <tr><td>3 x Optical resistor - ~3k-25k ohm</td></tr>
 <tr><td>1 x Adjustable resistor</td></tr>
-<tr><td>1 x RFID module <a href="http://forum.arduino.cc/index.php?topic=182242.0">arduino forum discussion link</a> <a href="http://us.yhs4.search.yahoo.com/yhs/search?p=rfid+rc522">yahoo search</a></td></tr>
+<tr><td>1 x RFID module <img src="http://img.dxcdn.com/productimages/sku_203517_1.jpg"> <a href="http://forum.arduino.cc/index.php?topic=182242.0">arduino forum discussion link</a> <a href="http://us.yhs4.search.yahoo.com/yhs/search?p=rfid+rc522">yahoo search</a> <a href="http://www.electrodragon.com/product/mifare-rc522-rfid-card-readerdetector-ic-card/">Product Page </a> <a href="http://www.electrodragon.com/w/index.php?title=RFID_Card_Reader/Detector_Module">wiki page with link to demo code: this is where I got my library code, but I renamed the code and got rid of an example that was basically a duplicate.</a> Most libraries are derived from <a rhef="https://github.com/miguelbalboa/rfid">this one</a> which seems to use code from the B2CQ code which I found <a href="http://www.grantgibson.co.uk/2012/04/how-to-get-started-with-the-mifare-mf522-an-and-arduino/">here.</a>
+<pre>
+Pin layout should be as follows (on Arduino Uno):
+
+    MOSI: Pin 11 / ICSP-4
+    MISO: Pin 12 / ICSP-1
+    SCK: Pin 13 / ISCP-3
+    SS: Pin 10 (Configurable)
+    RST: Pin 9 (Configurable) 
+</pre>
+<a href="http://duino4projects.com/projects/rfid-projects/">RFID projects and ideas</a> <a href="https://github.com/search?q=rc522">RC522 on github</a> </td></tr>
 <tr><td>1 x RFID keychain and white card</td></tr>
 <tr><td>1 x Temperature and humidity module<img src="http://img.dxcdn.com/productimages/sku_193260_1_small.jpg"><a href="http://www.dx.com/p/arduino-digital-temperature-humidity-sensor-module-121350#.U9RtptY550k">DX link</a><a href="https://learn.adafruit.com/dht">Adafruit tutorial; has links to code and other valuable info; they have a datasheet but for a model up gives tech specs though </a><a href="https://learn.adafruit.com/dht/connecting-to-a-dhtxx-sensor">connecting</a> <a href="https://github.com/adafruit/DHT-sensor-library">Adafruit DHT sensor github library</a> **NOTE** my sensor pinout is slightly different with Signal being far left and Vcc being center. I used the 100k resistor to pullup Vsignal. </td> </tr>
 <tr><td>4 x 4 keypad module <a href="http://bradsduino.blogspot.com/2012/10/4-x4-universal-16-key-keypad-arduino.html">Code and instructions for 4x4 keypad</a><a href="http://forum.arduino.cc/index.php/topic,5333.0.html">possibly useful</a> <a href="http://playground.arduino.cc/Code/Keypad">keypad libray</a> <a href="http://playground.arduino.cc/Main/KeypadTutorial">matrix keypad howo</a><a href="http://arduinodev.com/arduino-4x4-keypad-test/">same code as bradsduino</a> </td></tr>
 <tr><td>1 x LM35 sensor module - <a href="http://www.dx.com/s/lm35+temperature+sensor">lm35 temperature sensor</a> its just a small semicircular three pronged guy <a href="./datasheets/lm35.pdf">local datasheet</a> I think I fried this chip. I was having problems with just the USB connection from the PC. It seemed like the lm35 was drawing too much current such that board couldn't be programmed. You could tell as the 'On' light was very dim. and the L,Tx,Rx lights were never on. I attempted to rectify this situation by concurrently plugging in the 5V power supply. I pulled up the serial monitor and it was (consistently) reporting in the 500F range. I then smelled a burning smell. I unplugged all the power and toched the lm35 and burned myself. I let it cool off and plugged the USB cable back in and the lights on the Arduino board came on. I could connect to the serial  monitor but was getting nonsense temperatures. Again I touched the LM35 and it was really hot. I could unplug the jumpers to the LM35 and still get readings. Yeah pretty sure its KIA. I was reading the raw analog value and it was 499-500 when hooked up to 5V so am pretty sure it was just passing through the voltage in 0.1V increments.   </td></tr>
 <tr><td>1 x Infrared receiver</td></tr>
 <tr><td>1 x Flame sensor</td></tr>
-<tr><td>2 x Rocker switch - these are the two little tubes with HXD on the side. You can hear the ball bearing go back and forth when you tilt them.</td></tr>
+<tr><td>2 x Rocker switch - these are the two little tubes with HXD on the side. You can hear the ball bearing go back and forth when you tilt them. Use the <a href="http://arduino.cc/en/Tutorial/Button">button code</a> to test.</td></tr>
 <tr><td>1 x Remote control</td></tr>
 <tr><td><img src="http://www.hobbyking.com/hobbyking/store/catalog/37409s.jpg"> <img src="http://www.hobbyking.com/hobbyking/store/catalog/37409.jpg">1 x 1602/11C module <a href="http://www.dx.com/p/arduino-iic-i2c-twi-spi-serial-lcd-1602-module-blue-green-140080#.U9MTJdY550k">dx link</a> <a href="http://www.dx.com/s/1602">1602</a> <a href="http://www.dfrobot.com/index.php?route=product/product&product_id=135">DFRobot link, has schematics and sample code and library</a> <a href="http://arduino-info.wikispaces.com/LCD-Blue-I2C">appears that the first one is the same or at least has the same controller board on the back as mine</a> <a href="http://forum.arduino.cc/index.php/topic,202273.0.html">possibly useful:user asking questions about using this module.</a></td></tr>
 <tr><td> 1 x PS2 Joystick</td></tr>
